@@ -1,0 +1,66 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 11-Abr-2022 às 01:50
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Banco de dados: `mydb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `chamado`
+--
+
+CREATE TABLE `chamado` (
+  `id_chamado` int(11) NOT NULL,
+  `data_chamado` datetime NOT NULL,
+  `km_percorrido` float DEFAULT NULL,
+  `status_chamado` tinyint(4) NOT NULL,
+  `colaborador_id_colaborador` int(11) NOT NULL,
+  `frota_id_veiculo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `chamado`
+--
+ALTER TABLE `chamado`
+  ADD PRIMARY KEY (`id_chamado`),
+  ADD UNIQUE KEY `id_chamdado_UNIQUE` (`id_chamado`),
+  ADD KEY `fk_chamado_colaborador_idx` (`colaborador_id_colaborador`),
+  ADD KEY `fk_chamado_frota1_idx` (`frota_id_veiculo`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `chamado`
+--
+ALTER TABLE `chamado`
+  MODIFY `id_chamado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `chamado`
+--
+ALTER TABLE `chamado`
+  ADD CONSTRAINT `fk_chamado_colaborador` FOREIGN KEY (`colaborador_id_colaborador`) REFERENCES `colaborador` (`id_colaborador`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_chamado_frota1` FOREIGN KEY (`frota_id_veiculo`) REFERENCES `frota` (`id_veiculo`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+COMMIT;

@@ -1,0 +1,50 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 11-Abr-2022 às 01:49
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Banco de dados: `mydb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `colaborador`
+--
+
+CREATE TABLE `colaborador` (
+  `id_colaborador` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `habilitado` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `colaborador`
+--
+ALTER TABLE `colaborador`
+  ADD PRIMARY KEY (`id_colaborador`),
+  ADD UNIQUE KEY `id_colaborador_UNIQUE` (`id_colaborador`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `colaborador`
+--
+ALTER TABLE `colaborador`
+  MODIFY `id_colaborador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;

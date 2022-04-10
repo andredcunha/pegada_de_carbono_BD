@@ -1,0 +1,52 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 11-Abr-2022 às 01:48
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Banco de dados: `mydb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `frota`
+--
+
+CREATE TABLE `frota` (
+  `id_veiculo` int(11) NOT NULL,
+  `placa` varchar(7) NOT NULL,
+  `autonomia` float NOT NULL,
+  `disponibilidade` tinyint(4) NOT NULL,
+  `modelo` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `frota`
+--
+ALTER TABLE `frota`
+  ADD PRIMARY KEY (`id_veiculo`),
+  ADD UNIQUE KEY `id_veiculo_UNIQUE` (`id_veiculo`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `frota`
+--
+ALTER TABLE `frota`
+  MODIFY `id_veiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
