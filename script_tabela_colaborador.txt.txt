@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geraÁ„o: 11-Abr-2022 ‡s 01:49
--- Vers„o do servidor: 10.4.22-MariaDB
--- vers„o do PHP: 8.1.2
+-- Tempo de gera√ß√£o: 11-Abr-2022 √†s 01:49
+-- Vers√£o do servidor: 10.4.22-MariaDB
+-- vers√£o do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +28,11 @@ CREATE TABLE `colaborador` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Õndices para tabelas despejadas
+-- √çndices para tabelas despejadas
 --
 
 --
--- Õndices para tabela `colaborador`
+-- √çndices para tabela `colaborador`
 --
 ALTER TABLE `colaborador`
   ADD PRIMARY KEY (`id_colaborador`),
@@ -46,5 +46,5 @@ ALTER TABLE `colaborador`
 -- AUTO_INCREMENT de tabela `colaborador`
 --
 ALTER TABLE `colaborador`
-  MODIFY `id_colaborador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_colaborador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
