@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geraÁ„o: 11-Abr-2022 ‡s 01:48
--- Vers„o do servidor: 10.4.22-MariaDB
--- vers„o do PHP: 8.1.2
+-- Tempo de gera√ß√£o: 12-Abr-2022 √†s 00:51
+-- Vers√£o do servidor: 10.4.22-MariaDB
+-- vers√£o do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -23,18 +23,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `frota` (
   `id_veiculo` int(11) NOT NULL,
+  `modelo` varchar(20) DEFAULT NULL,
   `placa` varchar(7) NOT NULL,
   `autonomia` float NOT NULL,
-  `disponibilidade` tinyint(4) NOT NULL,
-  `modelo` varchar(11) DEFAULT NULL
+  `disponibilidade` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Õndices para tabelas despejadas
+-- √çndices para tabelas despejadas
 --
 
 --
--- Õndices para tabela `frota`
+-- √çndices para tabela `frota`
 --
 ALTER TABLE `frota`
   ADD PRIMARY KEY (`id_veiculo`),
@@ -48,5 +48,5 @@ ALTER TABLE `frota`
 -- AUTO_INCREMENT de tabela `frota`
 --
 ALTER TABLE `frota`
-  MODIFY `id_veiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_veiculo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
