@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geraÁ„o: 11-Abr-2022 ‡s 01:50
--- Vers„o do servidor: 10.4.22-MariaDB
--- vers„o do PHP: 8.1.2
+-- Tempo de gera√ß√£o: 11-Abr-2022 √†s 01:50
+-- Vers√£o do servidor: 10.4.22-MariaDB
+-- vers√£o do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,11 +31,11 @@ CREATE TABLE `chamado` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Õndices para tabelas despejadas
+-- √çndices para tabelas despejadas
 --
 
 --
--- Õndices para tabela `chamado`
+-- √çndices para tabela `chamado`
 --
 ALTER TABLE `chamado`
   ADD PRIMARY KEY (`id_chamado`),
@@ -51,10 +51,10 @@ ALTER TABLE `chamado`
 -- AUTO_INCREMENT de tabela `chamado`
 --
 ALTER TABLE `chamado`
-  MODIFY `id_chamado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_chamado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
--- RestriÁıes para despejos de tabelas
+-- Restri√ß√µes para despejos de tabelas
 --
 
 --
