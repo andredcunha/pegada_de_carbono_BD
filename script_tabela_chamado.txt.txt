@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `chamado` (
   `id_chamado` int(11) NOT NULL,
-  `data_chamado` datetime NOT NULL,
+  `data_chamado` date NOT NULL,
   `km_percorrido` float DEFAULT NULL,
   `status_chamado` tinyint(4) NOT NULL,
   `colaborador_id_colaborador` int(11) NOT NULL,
